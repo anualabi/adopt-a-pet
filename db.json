@@ -1,0 +1,16 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Watson",
+      "kind": "dog",
+      "photo": "https://res.cloudinary.com/ddssmdyq5/image/upload/v1662323647/pet-dog_lwbsbn.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mittens",
+      "kind": "cat",
+      "photo": "https://res.cloudinary.com/ddssmdyq5/image/upload/v1662323647/pet-cat_pzqvmg.jpg"
+    }
+  ]
+}

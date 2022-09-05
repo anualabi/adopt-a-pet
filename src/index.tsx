@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyles } from './GlobalStyles';
 import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 
+const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
 root.render(
   <React.StrictMode>
-    <Normalize />
-    <GlobalStyles />
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <Normalize />
+      <GlobalStyles />
+      <App />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
