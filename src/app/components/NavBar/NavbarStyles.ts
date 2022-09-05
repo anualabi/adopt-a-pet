@@ -7,8 +7,8 @@ export const StyledNavbar = styled.nav`
   width: 100vw;
 
   .logo-wrapper {
-    h1 {
-      font-size: 2rem;
+    .logo {
+      font-size: 1.5rem;
       font-weight: var(--bold-font);
       letter-spacing: 1px;
       padding: 1rem 0;

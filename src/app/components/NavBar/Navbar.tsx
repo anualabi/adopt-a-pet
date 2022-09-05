@@ -8,7 +8,7 @@ const Navbar = () => {
     <StyledNavbar>
       <Container>
         <Box className="logo-wrapper">
-          <Typography variant="h1" align="center">
+          <Typography align="left" className="logo">
             Adopt a Pet
           </Typography>
         </Box>
