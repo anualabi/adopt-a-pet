@@ -10,11 +10,11 @@ const Container = ({ children, maxWidth, ...props }: ContainerProps) => {
 };
 
 Container.propTypes = {
-  maxWidth: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl'])
+  maxWidth: PropTypes.oneOf(['sm', 'md', 'lg', 'xl'])
 };
 
 Container.defaultProps = {
-  maxWidth: 'md'
+  maxWidth: 'lg'
 };
 
 export default Container;
