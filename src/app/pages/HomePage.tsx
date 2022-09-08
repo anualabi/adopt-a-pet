@@ -1,6 +1,6 @@
 import Container from '../shared/components/Container/Container';
 import Typography from '../shared/components/Typography/Typography';
-import { PetList } from '../components/Pet';
+import PetList from '../components/PetList/PetList';
 import { getPetList } from '../shared/hooks/usePet';
 import Spinner from '../shared/components/Spinner/Spinner';
 import ErrorMessage from '../shared/components/Error/ErrorMessage';
