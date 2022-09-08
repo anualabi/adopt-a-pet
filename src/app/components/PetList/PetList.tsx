@@ -1,5 +1,5 @@
 import PetItem from '../PetItem/PetItem';
-import { PetProps } from '../../../shared/types/pet';
+import { PetProps } from '../../shared/types/pet';
 import { StyledPetList } from './PetListStyles';
 
 type PetListProps = { pets: PetProps[] };

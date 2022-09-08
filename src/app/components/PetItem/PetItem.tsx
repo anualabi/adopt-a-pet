@@ -1,7 +1,7 @@
-import Card from '../../../shared/components/Card/Card';
-import Typography from '../../../shared/components/Typography/Typography';
-import Avatar from '../../../shared/components/Avatar/Avatar';
-import { PetProps } from '../../../shared/types/pet';
+import Card from '../../shared/components/Card/Card';
+import Typography from '../../shared/components/Typography/Typography';
+import Avatar from '../../shared/components/Avatar/Avatar';
+import { PetProps } from '../../shared/types/pet';
 import { StyledPetItem } from './PetItemStyles';
 
 type PetItemProps = { pet: PetProps };

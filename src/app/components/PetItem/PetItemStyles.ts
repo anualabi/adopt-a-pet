@@ -3,11 +3,14 @@ import styled from 'styled-components';
 export const StyledPetItem = styled.div`
   height: 280px;
   margin: 1rem 1rem 3rem;
+  max-width: 280px;
+  width: 100%;
 
   .card {
     cursor: pointer;
-    max-width: 200px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     padding: 1rem;
   }
@@ -24,7 +27,7 @@ export const StyledPetItem = styled.div`
 
   @media screen and (min-width: 992px) {
     height: 350px;
-    margin: 0;
+    margin: 0 0 5rem;
 
     .card {
       max-width: 280px;
