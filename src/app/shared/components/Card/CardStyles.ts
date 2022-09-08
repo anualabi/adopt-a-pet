@@ -1,8 +1,7 @@
-import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 export interface CardProps extends React.ComponentPropsWithoutRef<'div'> {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export const StyledCard = styled.div`
