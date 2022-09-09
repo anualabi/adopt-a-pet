@@ -1,22 +1,24 @@
 import { useState, useRef, FormEvent, ChangeEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Avatar from '../../shared/components/Avatar/Avatar';
 import { Button } from '../../shared/components/Button/Button';
 import { Field } from '../../shared/components/Field/Field';
 import { petOption } from '../../shared/constants/petOption';
-import { addPetItem } from '../../shared/hooks/usePet';
+import { addPetItem, updatePetItem } from '../../shared/hooks/usePet';
 import { StyledPetForm } from './PetFormStyles';
 import { PetProps } from '../../shared/types/pet';
 
 interface PetFormProps {
   onsubmit: () => void;
+  currentPet?: PetProps;
 }
 
-const initialState: PetProps = { id: '', name: '', kind: '', photo: '' };
-
-const PetForm = ({ onsubmit }: PetFormProps) => {
+const PetForm = ({ onsubmit, currentPet }: PetFormProps) => {
+  const initialState = currentPet || { id: '', name: '', kind: '', photo: '' };
   const [pet, setPet] = useState(initialState);
   const photoInput = useRef<HTMLInputElement>(null);
-  const mutation = addPetItem(pet);
+  const mutation = currentPet ? updatePetItem(pet) : addPetItem(pet);
+  const navigate = useNavigate();
 
   const updatePhoto = () => {
     const file = photoInput.current?.files && photoInput.current.files[0];
@@ -37,6 +39,7 @@ const PetForm = ({ onsubmit }: PetFormProps) => {
     mutation.mutate();
     setPet(initialState);
     onsubmit();
+    !currentPet && navigate('/');
   };
 
   return (
@@ -47,7 +50,6 @@ const PetForm = ({ onsubmit }: PetFormProps) => {
         <Field.Input
           type="file"
           aria-label="photo"
-          required
           name="photo"
           ref={photoInput}
           onChange={updatePhoto}

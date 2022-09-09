@@ -14,6 +14,10 @@ export const StyledNavbar = styled.nav`
   }
 
   .logo-wrapper {
+    max-width: 180px;
+    width: 100%;
+    margin-right: auto;
+
     .logo {
       font-size: 1.5rem;
       font-weight: var(--bold-font);

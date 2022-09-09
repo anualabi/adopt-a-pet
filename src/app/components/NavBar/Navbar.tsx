@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { StyledNavbar } from './NavbarStyles';
 import Container from '../../shared/components/Container/Container';
 import Box from '../../shared/components/Box/Box';
@@ -10,9 +11,11 @@ const Navbar = ({ children }: NavbarProps) => {
     <StyledNavbar>
       <Container className="container">
         <Box className="logo-wrapper">
-          <Typography align="left" className="logo">
-            Adopt a Pet
-          </Typography>
+          <Link to="/">
+            <Typography align="left" className="logo">
+              Adopt a Pet
+            </Typography>
+          </Link>
         </Box>
         {children}
       </Container>

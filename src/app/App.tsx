@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar/Navbar';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
+import PetPage from './pages/PetPage/PetPage';
 import { Button } from './shared/components/Button/Button';
 import Modal from './shared/components/Modal/Modal';
 import PetForm from './components/PetForm/PetForm';
@@ -11,13 +13,18 @@ function App() {
 
   return (
     <StyledApp>
-      <Navbar>
-        <Button onClick={() => setIsOpen(true)}>Add Pet</Button>
-      </Navbar>
-      <HomePage />
-      <Modal modalIsOpen={modalIsOpen} closeModal={() => setIsOpen(false)} title="Add a Pet">
-        <PetForm onsubmit={() => setIsOpen(false)} />
-      </Modal>
+      <BrowserRouter>
+        <Navbar>
+          <Button onClick={() => setIsOpen(true)}>Add Pet</Button>
+        </Navbar>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/:id" element={<PetPage />} />
+        </Routes>
+        <Modal modalIsOpen={modalIsOpen} closeModal={() => setIsOpen(false)} title="Add a Pet">
+          <PetForm onsubmit={() => setIsOpen(false)} />
+        </Modal>
+      </BrowserRouter>
     </StyledApp>
   );
 }
