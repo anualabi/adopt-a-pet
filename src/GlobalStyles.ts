@@ -16,4 +16,8 @@ export const GlobalStyles = createGlobalStyle`${css`
     background: var(--element);
     color: var(--text-color);
   }
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
 `}`;
