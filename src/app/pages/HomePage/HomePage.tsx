@@ -1,9 +1,9 @@
-import Container from '../shared/components/Container/Container';
-import Typography from '../shared/components/Typography/Typography';
-import PetList from '../components/PetList/PetList';
-import { getPetList } from '../shared/hooks/usePet';
-import Spinner from '../shared/components/Spinner/Spinner';
-import ErrorMessage from '../shared/components/Error/ErrorMessage';
+import Container from '../../shared/components/Container/Container';
+import Typography from '../../shared/components/Typography/Typography';
+import PetList from '../../components/PetList/PetList';
+import { getPetList } from '../../shared/hooks/usePet';
+import Spinner from '../../shared/components/Spinner/Spinner';
+import ErrorMessage from '../../shared/components/Error/ErrorMessage';
 
 const HomePage = () => {
   const { isLoading, isError, data } = getPetList();
