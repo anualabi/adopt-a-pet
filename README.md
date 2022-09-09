@@ -1,4 +1,4 @@
-<h1 align="center">Adopt a Pet App</h1>
+<h1 align="center">Pet Store App</h1>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -28,6 +28,7 @@ The features implemented are as follows:
 - User can see list of pets available for adoption
 - User can add a new pet for adoption
 - User can edit pet information
+- User can delete (adopt) pet
 
 ### How To Use
 
