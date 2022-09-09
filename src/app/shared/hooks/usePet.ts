@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { PetProps } from '../types/pet';
-import { fetchPetData, postPetData, updatePetData } from '../../services/services';
+import { deletePetData, fetchPetData, postPetData, updatePetData } from '../../services/services';
 
 const apiUrl = process.env.REACT_APP_API;
 
@@ -31,6 +31,15 @@ export function updatePetItem(data: PetProps) {
   return useMutation(() => updatePetData(`${apiUrl}/${data.id}`, data), {
     onSuccess: () => {
       queryClient.invalidateQueries(['petItem']);
+    }
+  });
+}
+
+export function deletePetItem(id: string | undefined) {
+  const queryClient = useQueryClient();
+  return useMutation(() => deletePetData(`${apiUrl}/${id}`), {
+    onSuccess: () => {
+      queryClient.invalidateQueries(['petList']);
     }
   });
 }

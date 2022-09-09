@@ -8,10 +8,11 @@ import { StyledPetDetails } from './PetDetailsStyles';
 
 interface PetDetailsProps {
   pet: PetProps;
-  handleClick: () => void;
+  onEditPet: () => void;
+  onAdoptPet: () => void;
 }
 
-const PetDetails = ({ pet, handleClick }: PetDetailsProps) => {
+const PetDetails = ({ pet, onEditPet, onAdoptPet }: PetDetailsProps) => {
   const { name, photo, kind } = pet;
 
   return (
@@ -27,9 +28,14 @@ const PetDetails = ({ pet, handleClick }: PetDetailsProps) => {
           <Typography className="pet-text pet-kind">
             <span>Kind:</span> {kind}
           </Typography>
-          <Button className="btn" onClick={handleClick}>
-            Edit pet
-          </Button>
+          <Box className="pet-cta">
+            <Button className="btn" onClick={onEditPet}>
+              Edit pet
+            </Button>
+            <Button className="btn" onClick={onAdoptPet}>
+              Adopt pet
+            </Button>
+          </Box>
         </Box>
       </Card>
     </StyledPetDetails>

@@ -32,8 +32,13 @@ export const StyledPetDetails = styled.div`
     font-weight: var(--normal-font);
   }
 
-  .pet-info > .btn {
+  .pet-info > .pet-cta {
     margin-top: 2rem;
+  }
+
+  .pet-cta {
+    display: flex;
+    column-gap: 1rem;
   }
 
   @media screen and (min-width: 992px) {

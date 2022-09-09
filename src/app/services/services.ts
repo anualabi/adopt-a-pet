@@ -13,3 +13,7 @@ export const postPetData = <T>(url: string, data: PetProps): Promise<T> => {
 export const updatePetData = <T>(url: string, data: PetProps): Promise<T> => {
   return axios.put(url, data);
 };
+
+export const deletePetData = <T>(url: string): Promise<T> => {
+  return axios.delete(url);
+};
