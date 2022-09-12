@@ -17,7 +17,7 @@ export const StyledSpinner = styled.div`
   }
 
   .container > .spinner {
-    border: 10px solid var(--background);
+    border: 10px solid var(--text);
     border-top: 10px solid transparent;
     border-radius: 50%;
     width: 80px;
